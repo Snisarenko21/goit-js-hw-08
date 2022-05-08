@@ -46,10 +46,10 @@ function onFormDataInput(e) {
 
 function populateFormData() {
     const savedMessage = localStorage.getItem(STORAGE_KEY);
-    const parsedsavedMessage = JSON.parse(savedMessage)
+    const parsedMessage = JSON.parse(savedMessage)
     if (savedMessage) {
-        refs.form.elements.message.value = parsedsavedMessage.message || "";
-        refs.form.elements.email.value = parsedsavedMessage.email || "";
+        refs.form.elements.message.value = parsedMessage.message || "";
+        refs.form.elements.email.value = parsedMessage.email || "";
     }
 }
 

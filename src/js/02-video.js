@@ -13,9 +13,11 @@ player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
 // створюємо функцію, яка перевіряє чи є ключ в локалсторідж
 function onTimeUpdate(data) {
+   console.log(data.seconds);
     
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data.seconds));
 }
    
 player.setCurrentTime(localStorage.getItem("videoplayer-current-time"));
     
+

@@ -49,7 +49,7 @@ function populateFormData() {
     const parsedsavedMessage = JSON.parse(savedMessage)
     if (savedMessage) {
         refs.form.elements.message.value = parsedsavedMessage.message || "";
-        refs.form.elements.email.value = parsedsavedMessageemail || "";
+        refs.form.elements.email.value = parsedsavedMessage.email || "";
     }
 }
 

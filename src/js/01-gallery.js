@@ -5,6 +5,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items.js';
 
 const refs = document.querySelector(".gallery");
+console.log(refs);
 
 const listEl = createListEl(galleryItems);
 

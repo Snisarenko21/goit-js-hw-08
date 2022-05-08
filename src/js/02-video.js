@@ -1,3 +1,4 @@
+import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
 
 
@@ -11,7 +12,6 @@ player.setVolume(0);
     
 player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
-// створюємо функцію, яка перевіряє чи є ключ в локалсторідж
 function onTimeUpdate(data) {
    console.log(data.seconds);
     

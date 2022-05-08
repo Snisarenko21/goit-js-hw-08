@@ -45,10 +45,13 @@ function onFormDataInput(e) {
 };
 
 function populateFormData() {
-    const savedMasseg = localStorage.getItem(STORAGE_KEY);
-    const parsedsavedMasseg = JSON.parse(savedMasseg)
-    if (savedMasseg) {
-        refs.form.elements.message.value = parsedsavedMasseg.message || "";
-        refs.form.elements.email.value = parsedsavedMasseg.email || "";
+    const savedMessage = localStorage.getItem(STORAGE_KEY);
+    const parsedsavedMessage = JSON.parse(savedMessage)
+    if (savedMessage) {
+        refs.form.elements.message.value = parsedsavedMessage.message || "";
+        refs.form.elements.email.value = parsedsavedMessageemail || "";
     }
 }
+
+
+

@@ -44,13 +44,31 @@ function onFormDataInput(e) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 };
 
-function populateFormData() {
+ function populateFormData() {
+  
     const savedMessage = localStorage.getItem(STORAGE_KEY);
-    const parsedMessage = JSON.parse(savedMessage)
+
+    const parsedMessage = JSON.parse(savedMessage);
+    
+    console.log(parsedMessage);
+    
     if (savedMessage) {
-        refs.form.elements.message.value = parsedMessage.message || "";
-        refs.form.elements.email.value = parsedMessage.email || "";
+         
+            if (parsedMessage.email) {
+                refs.input.value = parsedMessage.email;
+                formData[refs.input.name] = parsedMessage.email;
+            }
+            if (parsedMessage.message) {
+                refs.textarea.value = parsedMessage.message;
+                formData[refs.textarea.name] = parsedMessage.message;
+            }
+        }
     }
-}
+      
+        
+
+
+
+
 
 
